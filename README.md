@@ -28,7 +28,7 @@ To stop all the containers running ``docker-compose stop``
 To remove all the containers ``docker-compose rm``  
 
 ##  Notes
-0. Currently the zookeeper and kafka containers use volumes that are on the local filesystem for Linux, but for Macs are inside the boot2docker vm (type `boot2docker ssh` and explore /tmp/docker). These volumes will survive container restarts and should be deleted (and recreated for linux users) if you want your containers to start with clean volumes.
+0. Currently the zookeeper and kafka containers use volumes that are on the local filesystem for Linux, but for Macs are inside the docker-machine vm (type `docker-machine ssh default` and explore /tmp/docker). These volumes will survive container restarts and should be deleted (and recreated for linux users) if you want your containers to start with clean volumes.
 0. If you need to repoint the docker-compose.yml soft link, please shutdown and remove the current configuration first ``docker-compose stop && docker-compose rm``
 
 ##  TODO
