@@ -39,8 +39,8 @@ now and every time you reload your routing table or restart the OS.
 
     docker-compose up -d
 
-0. Running `docker-compose ps` or `docker ps` should show at least 1 Zookeeper
-   container and 1 or 3 Kafka containers.
+0. Running `docker-compose ps` or `docker ps` should show at least 1
+   [Zookeeper][zookeeper] container and 1 or 3 Kafka containers.
 
 ##  Walkthroughs
 
