@@ -18,8 +18,6 @@ for local development and experimentation.
 
 0. Install [Docker Toolbox][docker-toolbox]
 
-    brew install docker-machine
-
 :memo: You will need to carry out this [routing stepup step](./OSX-Routing.md)
 now and every time you reload your routing table or restart the OS.
 
