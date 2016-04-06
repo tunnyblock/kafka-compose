@@ -55,7 +55,7 @@ Run
 `` echo '{"name":"Ang", "skills":["fire-bending", "water-bending", "earth-bending", "air-bending"]}' | ./kafka-console-producer --broker-list $(boot2docker ip):9092 --topic benders``  
 `` echo '{"name":"Korra", "skills":["fire-bending", "water-bending", "earth-bending", "air-bending"]}' | ./kafka-console-producer --broker-list $(boot2docker ip):9092 --topic benders``  
 
-Since we didn't provide any keys, these messages will end up on any partition. Luckily we can run a command to consume messages from all partitions, so to see these messages run  
+Since we didn't provide any keys, these messages will not end up on any partition. Luckily we can run a command to consume messages from all partitions, so to see these messages run  
 ``./kafka-console-consumer --zookeeper $(boot2docker ip):2181 --topic benders --from-beginning``  
 This will consume messages from all partitions from the beginnning (and will continue to consume), you should see something similar to this  
 > {"name":"Ang", "skills":["fire-bending", "water-bending", "earth-bending", "air-bending"]}  
