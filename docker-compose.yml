@@ -78,3 +78,21 @@ kafkarestproxy:
   links:
     - zookeeper
     - schemaregistry
+
+riemann:
+  build: /Users/sjohnson/projects/panopticon
+  container_name: riemann
+  links:
+    - riemann-dash
+  ports:
+    - "5555:5555"
+    - "5556:5556"
+
+riemann-dash:
+  build: /Users/sjohnson/projects/panopticon
+  container_name: riemann-dash
+  entrypoint:
+    - /panopticon/deploy/bin/run
+    - run-dash
+  ports:
+    - "4567:4567"
